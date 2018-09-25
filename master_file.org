@@ -4277,7 +4277,8 @@ that thinger and let's get motoring there.
 
 * <2017-04-11 Tue> -- BASH BASH BASH: The Terminal, the Shell, and a Thousand Little Programs
 :PROPERTIES:
-:header-args: :dir ~/ :results verbatim output
+:header-args: :dir ~/ :results verbatim output :exports both
+:EXPORT_FILE_NAME: bash_bash_bash.md
 :END:
 
 ** What on Earth Even Is This
@@ -4294,7 +4295,7 @@ pwd
 : /home/rdonaldson
 
 *** ~cd~  |> "change directory"
-~cd~ changes your current working directory. Pairs well with [[pwd]].
+~cd~ changes your current working directory. Pairs well with ~pwd~.
 
 #+BEGIN_SRC sh
 pwd
@@ -4390,7 +4391,7 @@ drwxr-xr-x.  2 rdonaldson rdonaldson     4096 Apr  3 10:32 Videos
 
 Note that this /also/ includes a set of other pieces of information! Who doesn't love that?
 
-If you need to see dotted files too, pass ~-a~. Note that for this doc, I'm also using [[head]] -- otherwise there's way too much output!
+If you need to see dotted files too, pass ~-a~. Note that for this doc, I'm also using ~head~ -- otherwise there's way too much output!
 
 #+BEGIN_SRC sh
 ls -a | head -n 15
@@ -4461,10 +4462,8 @@ mkdir -p foo/bar/baz/           # This will work every time. Yay!
 ~touch~ is a little like ~mkdir~ for files. It has two uses:
 
 1. Make an empty file
-2.
-#+BEGIN_SRC clojure
+2. Update the "modified" time on a file
 
-#+END_SRC
 *** ~rm~ |> "remove"
 ~rm~ lets you delete a file! Remember: deleting things from the command line /does not/ move them to the Trash Can. It is immediately a "real" delete.
 
